@@ -1,0 +1,22 @@
+{% extends 'modelo.html' %}
+
+{% block conteudo %}
+  <h1 class="mb-4">Chat IA</h1>
+
+  <form method="POST" action="{{ url_for('chat') }}">
+    <div class="mb-3">
+      <label for="mensagem" class="form-label">Digite sua pergunta:</label>
+      <textarea class="form-control" id="mensagem" name="mensagem" rows="3" required>{{ request.form.mensagem or '' }}</textarea>
+    </div>
+    <button type="submit" class="btn btn-primary">Enviar</button>
+  </form>
+
+  {% if resposta %}
+    <div class="mt-4">
+      <h5>Resposta:</h5>
+      <div class="alert alert-secondary" role="alert">
+        {{ resposta }}
+      </div>
+    </div>
+  {% endif %}
+{% endblock %}

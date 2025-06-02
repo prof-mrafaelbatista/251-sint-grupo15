@@ -1,0 +1,104 @@
+{% extends "modelo.html" %}
+{% block conteudo %}
+
+<h1 class="text-center mb-4">Fundamentos da Programação em Python</h1>
+
+<!-- Estruturas de Seleção -->
+<div class="card mb-4">
+  <div class="card-header">
+    <h5> Estruturas de Seleção (Condicionais)</h5>
+  </div>
+  <div class="card-body">
+    <p>Permitem que o programa tome decisões com base em condições. As principais são <strong>if</strong>, <strong>else</strong> e <strong>elif</strong>.</p>
+    <p><strong>Aplicação:</strong> Verificar condições, tomar decisões diferentes conforme os dados.</p>
+    <div class="bg-dark p-3 rounded text-light">
+      <code>idade = int(input("Digite sua idade: "))</code><br>
+      <code>if idade >= 18:</code><br>
+      <code>&nbsp;&nbsp;print("Você é maior de idade")</code><br>
+      <code>else:</code><br>
+      <code>&nbsp;&nbsp;print("Você é menor de idade")</code>
+    </div>
+  </div>
+</div>
+
+<!-- Estruturas de Repetição -->
+<div class="card mb-4">
+  <div class="card-header">
+    <h5> Estruturas de Repetição (Laços)</h5>
+  </div>
+  <div class="card-body">
+    <p>Permitem repetir blocos de código enquanto uma condição é verdadeira ou para uma sequência de elementos. Usamos <strong>while</strong> e <strong>for</strong>.</p>
+    <p><strong>Aplicação:</strong> Repetição de tarefas, contagens, percorrer listas e vetores.</p>
+    <div class="bg-dark p-3 rounded text-light">
+      <code>for i in range(1, 6):</code><br>
+      <code>&nbsp;&nbsp;print("Contagem:", i)</code><br><br>
+      <code>contador = 1</code><br>
+      <code>while contador <= 5:</code><br>
+      <code>&nbsp;&nbsp;print("Contagem:", contador)</code><br>
+      <code>&nbsp;&nbsp;contador += 1</code>
+    </div>
+  </div>
+</div>
+
+<!-- Vetores e Matrizes -->
+<div class="card mb-4">
+  <div class="card-header">
+    <h5> Vetores e Matrizes</h5>
+  </div>
+  <div class="card-body">
+    <p><strong>Vetores (listas)</strong> armazenam vários elementos em uma única variável. <strong>Matrizes (listas dentro de listas)</strong> representam dados em formato de tabela (linhas e colunas).</p>
+    <p><strong>Aplicação:</strong> Guardar coleções de dados, como notas de alunos, produtos, tabelas.</p>
+    <div class="bg-dark p-3 rounded text-light">
+      <strong># Vetor:</strong><br>
+      <code>frutas = ["maçã", "banana", "uva"]</code><br>
+      <code>for fruta in frutas:</code><br>
+      <code>&nbsp;&nbsp;print(fruta)</code><br><br>
+
+      <strong># Matriz:</strong><br>
+      <code>matriz = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]</code><br>
+      <code>for linha in matriz:</code><br>
+      <code>&nbsp;&nbsp;print(linha)</code>
+    </div>
+  </div>
+</div>
+
+<!-- Funções e Procedimentos -->
+<div class="card mb-4">
+  <div class="card-header">
+    <h5> Funções e Procedimentos</h5>
+  </div>
+  <div class="card-body">
+    <p>São blocos de código que executam tarefas específicas e podem ser reutilizados sempre que necessário. As funções podem retornar um valor ou apenas executar uma ação.</p>
+    <p><strong>Aplicação:</strong> Organizar e reaproveitar código, facilitar manutenção.</p>
+    <div class="bg-dark p-3 rounded text-light">
+      <code>def saudacao():</code><br>
+      <code>&nbsp;&nbsp;print("Olá, bem-vindo!")</code><br>
+      <code>saudacao()</code><br><br>
+
+      <code>def soma(a, b):</code><br>
+      <code>&nbsp;&nbsp;return a + b</code><br>
+      <code>resultado = soma(5, 3)</code><br>
+      <code>print("Resultado:", resultado)</code>
+    </div>
+  </div>
+</div>
+
+<!-- Tratamento de Exceção -->
+<div class="card mb-4">
+  <div class="card-header">
+    <h5> Tratamento de Exceção</h5>
+  </div>
+  <div class="card-body">
+    <p>Permite lidar com erros que podem ocorrer durante a execução do programa, evitando que ele pare de funcionar.</p>
+    <p><strong>Aplicação:</strong> Validar dados, evitar falhas, tratar erros de digitação ou cálculo.</p>
+    <div class="bg-dark p-3 rounded text-light">
+      <code>try:</code><br>
+      <code>&nbsp;&nbsp;num = int(input("Digite um número: "))</code><br>
+      <code>&nbsp;&nbsp;print("Número digitado:", num)</code><br>
+      <code>except ValueError:</code><br>
+      <code>&nbsp;&nbsp;print("Você digitou um valor inválido.")</code>
+    </div>
+  </div>
+</div>
+
+{% endblock %}
